@@ -448,22 +448,6 @@ body {
     margin-top: 10px;
 }
 
-/* @media (max-width: 768px) {
-    .stat-card {
-        flex-direction: column;
-        gap: 50px; */
-/* Stack vertically on smaller screens */
-/* width: 60%;
-        height: 26em;
-    } */
-
-/* .stat-box {
-        width: 100%;
-        max-width: 300px; */
-/* Ensure each stat doesn't stretch too wide */
-/* }
-} */
-
 @media (max-width: 468px) {
     .stat-card {
         flex-direction: column;
@@ -483,7 +467,8 @@ body {
 /* About Us Section */
 .about-us {
     padding: 50px 15px;
-    /* background-color: #f9f9f9; */
+    position: relative;
+    overflow: hidden;
 }
 
 .about-us-title {
@@ -517,6 +502,35 @@ body {
     color: #494949;
     padding: 15px;
     text-align: justify;
+}
+
+.blob-about-bg {
+    position: absolute;
+    top: 11em;
+    left: 6em;
+    width: 500px;
+    height: 500px;
+    background: url('/Assets/Images/blob-haikei.svg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1 !important;
+}
+
+@media (max-width: 767px) {
+    .blob-about-bg{
+        top: 10em;
+        left: -2em;
+        height: 19em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .blob-about-bg{
+        top: 12em;
+        left: 1em;
+        width: 400px;
+        height: 400px;
+    }
 }
 
 .read-more-btn {
@@ -1009,6 +1023,11 @@ body {
     }
 }
 
+#faq{
+    position: relative;
+    overflow: hidden;
+}
+
 .faq-container {
     padding: 50px 20px;
     margin-top: 3em;
@@ -1107,6 +1126,25 @@ body {
 .faq-item.active .faq-answer {
     max-height: 200px;
     padding-top: 10px;
+}
+
+.blob-faq-bg {
+    position: absolute;
+    top: 10em;
+    right: -7em;
+    width: 400px;
+    height: 400px;
+    background: url('/Assets/Images/blob-haikei-2.svg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1 !important;
+}
+
+@media (max-width: 768px) {
+    .blob-faq-bg{
+        top: 0em;
+        left: 0em;
+    }
 }
 
 @media (min-width: 992px) {

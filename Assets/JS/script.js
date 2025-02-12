@@ -33,7 +33,19 @@ function showSplashScreen() {
     // Start animations immediately if splash screen was already shown
     startStatAnimation();
     initScrollReveal(); // Initialize ScrollReveal animations without delay
+    revealAboutImage();
   }
+}
+
+// Function for About Image Animation (Bottom Reveal)
+function revealAboutImage() {
+  const sr = ScrollReveal();
+  sr.reveal(".aboutimg", {
+    origin: "bottom",
+    distance: "80px",
+    duration: 1000,
+    delay: 200,
+  });
 }
 
 // ScrollReveal animation initialization
@@ -46,7 +58,7 @@ function initScrollReveal() {
   });
 
   sr.reveal(".about-us-title", { delay: 200 });
-  sr.reveal(".about-us-content", { delay: 400 });
+  sr.reveal(".about-text", { delay: 400 });
   sr.reveal(".read-more-btn", { delay: 200 });
   sr.reveal("#our-services .mb-4", { delay: 600 });
   sr.reveal(".service-card", { delay: 600 });
@@ -444,44 +456,37 @@ cards.forEach((card) => {
   };
 });
 
-
 // Function to check if the Contact Us section is in view (partially or fully)
 function isSectionInView(section) {
   const rect = section.getBoundingClientRect();
-  return (
-    rect.top < window.innerHeight && 
-    rect.bottom > 0
-  );
+  return rect.top < window.innerHeight && rect.bottom > 0;
 }
 
 // Function to check if the Contact Us section is in view (partially or fully)
 function isSectionInView(section) {
   const rect = section.getBoundingClientRect();
-  return (
-    rect.top < window.innerHeight && 
-    rect.bottom > 0
-  );
+  return rect.top < window.innerHeight && rect.bottom > 0;
 }
 
 // Select the contact section and WhatsApp button
-const contactSection = document.getElementById('contact-us');
-const whatsappButton = document.getElementById('whatsappButton');
+const contactSection = document.getElementById("contact-us");
+const whatsappButton = document.getElementById("whatsappButton");
 
 // Add a scroll event listener to toggle the WhatsApp button
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   if (isSectionInView(contactSection)) {
-    whatsappButton.style.display = 'flex'; // Show the button
-    whatsappButton.style.animation = 'slide-down 0.5s ease-out forwards'; // Trigger slide-down animation
+    whatsappButton.style.display = "flex"; // Show the button
+    whatsappButton.style.animation = "slide-down 0.5s ease-out forwards"; // Trigger slide-down animation
   } else {
-    whatsappButton.style.display = 'none'; // Hide the button
-    whatsappButton.style.opacity = '0'; // Reset opacity for reanimation
+    whatsappButton.style.display = "none"; // Hide the button
+    whatsappButton.style.opacity = "0"; // Reset opacity for reanimation
   }
 });
 
 // Ensure button state is correct on page load
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   if (isSectionInView(contactSection)) {
-    whatsappButton.style.display = 'flex';
-    whatsappButton.style.animation = 'slide-down 0.5s ease-out forwards';
+    whatsappButton.style.display = "flex";
+    whatsappButton.style.animation = "slide-down 0.5s ease-out forwards";
   }
 });
