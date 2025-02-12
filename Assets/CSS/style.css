@@ -516,15 +516,30 @@ body {
     z-index: -1 !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width:576px) {
     .blob-about-bg{
-        top: 10em;
+        top:10em ;
+        left:-2em;
+        height: 19em;
+    }
+}
+
+@media (min-width:577px) and (max-width: 769px) {
+    .blob-about-bg{
+        top: 21em;
         left: -2em;
         height: 19em;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width:770px) and (max-width:992px) {
+    .blob-about-bg{
+        top: 12em;
+        left: 1em;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1024px) {
     .blob-about-bg{
         top: 12em;
         left: 1em;
