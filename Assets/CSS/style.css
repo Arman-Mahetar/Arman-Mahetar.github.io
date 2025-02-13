@@ -1163,6 +1163,31 @@ body {
     }
 }
 
+.blob{
+    position: relative;
+}
+
+.blob-faq-left-bg {
+    position: absolute;
+    top: -8em;
+    left: -8em;
+    width: 400px;
+    height: 400px;
+    background: url('/Assets/Images/blob-haikei-3.svg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1 !important;
+    transform: scaleX(-1);
+}
+
+
+@media (max-width: 768px) {
+    .blob-faq-left-bg{
+        top: 0em;
+        left: 0em;
+    }
+}
+
 @media (min-width: 992px) {
 
     .faq-title,
@@ -1177,8 +1202,8 @@ body {
 
 .whatsapp-button {
     position: fixed;
-    bottom: 30px;
-    right: 20px;
+    bottom: 36px;
+    left: 24px;
     z-index: 1000;
     display: none;
     animation: slide-down 0.5s ease-out forwards;
@@ -1200,8 +1225,8 @@ body {
   }
 
   .whatsapp-button img {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
   }
 
 /* Slide-down animation */
@@ -1220,6 +1245,8 @@ body {
 .contact-us {
     padding: 50px 20px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .section-title {
