@@ -512,7 +512,7 @@ body {
     height: 500px;
     background: url('/Assets/Images/blob-haikei.svg') no-repeat center center;
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: -1 !important;
 }
 
@@ -1152,11 +1152,11 @@ body {
     height: 400px;
     background: url('/Assets/Images/blob-haikei-2.svg') no-repeat center center;
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: -1 !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .blob-faq-bg{
         top: 0em;
         left: 0em;
@@ -1175,16 +1175,16 @@ body {
     height: 400px;
     background: url('/Assets/Images/blob-haikei-3.svg') no-repeat center center;
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: -1 !important;
     transform: scaleX(-1);
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .blob-faq-left-bg{
-        top: 0em;
-        left: 0em;
+        top: -6em;
+        left: 0.5em;
     }
 }
 
@@ -1682,3 +1682,13 @@ button:hover i {
 .footer .custom-shape-divider-top-1737023059 .shape-fill {
     fill: #FFFFFF;
 }
+
+.bpMessageListViewport {
+    background: linear-gradient(to bottom, #4484fb, #679eff) !important;
+  }
+  
+  
+  .bpComposerPoweredBy {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }

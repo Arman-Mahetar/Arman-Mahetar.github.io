@@ -35,27 +35,27 @@ body {
     text-align: center;
     transition: transform 0.3s ease;
     margin: 0 5px;
-  }
-  
-  .navbar-nav .nav-link.active {
+}
+
+.navbar-nav .nav-link.active {
     color: #1404fa !important;
-  }
-  
-  .navbar-nav .nav-link:hover {
+}
+
+.navbar-nav .nav-link:hover {
     color: #1404fa !important;
-  }
-  
-  /* .menu-icon {
+}
+
+/* .menu-icon {
     font-size: 1.7rem;
   } */
-  
-  
-  @media (min-width:992px) {
+
+
+@media (min-width:992px) {
     .navbar-nav .nav-link {
         text-decoration: none;
         position: relative;
     }
-  
+
     .navbar-nav .nav-item .nav-link::before {
         content: "";
         position: absolute;
@@ -66,26 +66,26 @@ body {
         background: #1404fa;
         transition: 0.5s;
     }
-  
+
     .navbar-nav .nav-item:hover .nav-link::before {
         width: 45%;
         transform: translateX(60%);
     }
-  }
-  
-  @media (max-width: 468px) {
-  
+}
+
+@media (max-width: 468px) {
+
     .navbar-brand {
         margin-left: -9px;
     }
-  
+
     .ms-2 {
         margin-left: -50px !important;
     }
-  }
-  
-  @media (max-width: 768px) {
-  
+}
+
+@media (max-width: 768px) {
+
     .navbar {
         position: fixed;
         top: 0;
@@ -93,48 +93,48 @@ body {
         height: 3.5em;
         z-index: 1000;
     }
-  
+
     .navbar .navbar-brand {
         gap: 0.5em;
     }
-  
+
     .ms-1 {
         max-width: 5.5em;
     }
-  
+
     .ms-2 {
         max-width: 13em;
     }
-  
-  }
-  
-  @media (max-width: 991.98px) {
-  
+
+}
+
+@media (max-width: 991.98px) {
+
     .navbar-white {
         background-color: white !important;
     }
-  
+
     .navbar-colored {
         background-color: #ebf3fe !important;
     }
-  
+
     .navbar-collapse.bg-colored {
         background-color: #ebf3fe !important;
     }
-  
+
     .navbar-collapse.bg-white {
         background-color: #ffffffcf !important;
     }
-  
+
     .navbar-nav .nav-link.active {
         text-decoration: underline;
     }
-  
+
     .navbar-brand,
     .navbar-nav {
         justify-content: center;
     }
-  
+
     .navbar-toggler {
         border: none;
         background: transparent;
@@ -142,12 +142,12 @@ body {
         color: rgb(1, 0, 0);
         transition: transform 0.3s ease, color 0.3s ease;
     }
-  
+
     .navbar-toggler:focus {
         outline: none;
         box-shadow: none;
     }
-  
+
     .navbar-nav .nav-link {
         color: black !important;
         font-weight: 500;
@@ -158,12 +158,12 @@ body {
         margin: 0 5px;
         padding: 10px 0;
     }
-  
+
     .navbar-nav .nav-link:hover {
         color: #1404fa !important;
         transform: scale(1.1);
     }
-  
+
     .navbar-collapse {
         position: absolute;
         top: 100%;
@@ -174,8 +174,8 @@ body {
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.178);
         border-radius: 10px;
     }
-  }
-  
+}
+
 
 #our-services {
     padding-top: 3rem;
@@ -213,14 +213,14 @@ body {
 }
 
 /* Glow Card Effect */
-.glow-card{
+.glow-card {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    --clr:blue;
+    --clr: blue;
 }
 
- .glow-card::before {
+.glow-card::before {
     content: '';
     position: absolute;
     top: var(--y);
@@ -233,11 +233,11 @@ body {
     transition: 0.5s top 0s left 0s;
 }
 
- .glow-card:hover::before {
+.glow-card:hover::before {
     opacity: 1;
 }
 
- .glow-card::after {
+.glow-card::after {
     content: '';
     position: absolute;
     inset: 2.5px;
@@ -245,11 +245,28 @@ body {
     border-radius: 8px;
 }
 
-.glow-body{
+.glow-body {
     position: relative;
     z-index: 1;
 }
 
+.blob {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.blob-service-bg {
+    position: absolute;
+    top: -5em;
+    left: -10em;
+    width: 400px;
+    height: 400px;
+    background: url('/Assets/Images/blob-haikei-2.svg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1 !important;
+    /* transform: scaleX(-1); */
+}
 
 .service-card {
     background-color: #f6f6f6;
