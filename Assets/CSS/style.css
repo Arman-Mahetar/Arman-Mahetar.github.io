@@ -292,13 +292,14 @@ body {
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+}
 
-  /* Glow effect on hover */
-  .hero-button:hover {
+/* Glow effect on hover */
+.hero-button:hover {
     /* transform: translateY(-3px); Slight lift effect */
-    box-shadow: 0 0 12px rgba(5, 43, 184, 0.8), 0 0 20px rgba(5, 43, 184, 0.6); /* Blue glow */
-  }
+    box-shadow: 0 0 12px rgba(5, 43, 184, 0.8), 0 0 20px rgba(5, 43, 184, 0.6);
+    /* Blue glow */
+}
 
 .hero-image img {
     max-width: 45%;
@@ -517,15 +518,15 @@ body {
 }
 
 @media (max-width:576px) {
-    .blob-about-bg{
-        top:10em ;
-        left:-2em;
+    .blob-about-bg {
+        top: 10em;
+        left: -2em;
         height: 19em;
     }
 }
 
 @media (min-width:577px) and (max-width: 769px) {
-    .blob-about-bg{
+    .blob-about-bg {
         top: 21em;
         left: -2em;
         height: 19em;
@@ -533,7 +534,7 @@ body {
 }
 
 @media (min-width:770px) and (max-width:992px) {
-    .blob-about-bg{
+    .blob-about-bg {
         top: 20em;
         left: 0em;
         height: 23em;
@@ -541,7 +542,7 @@ body {
 }
 
 @media (min-width: 993px) and (max-width: 1024px) {
-    .blob-about-bg{
+    .blob-about-bg {
         top: 12em;
         left: 1em;
         width: 400px;
@@ -1039,7 +1040,7 @@ body {
     }
 }
 
-#faq{
+#faq {
     position: relative;
     overflow: hidden;
 }
@@ -1157,36 +1158,39 @@ body {
 }
 
 @media (max-width: 767px) {
-    .blob-faq-bg{
+    .blob-faq-bg {
         top: 0em;
         left: 0em;
     }
 }
 
-.blob{
+/* .blob{
     position: relative;
+} */
+
+@media (min-width:1024px) {
+
+    .blob-faq-left-bg {
+        position: absolute;
+        top: 10em;
+        left: -8em;
+        width: 400px;
+        height: 400px;
+        background: url('/Assets/Images/blob-haikei-3.svg') no-repeat center center;
+        background-size: cover;
+        opacity: 0.2;
+        z-index: -1 !important;
+        transform: scaleX(-1);
+    }
 }
 
-.blob-faq-left-bg {
-    position: absolute;
-    top: -8em;
-    left: -8em;
-    width: 400px;
-    height: 400px;
-    background: url('/Assets/Images/blob-haikei-3.svg') no-repeat center center;
-    background-size: cover;
-    opacity: 0.2;
-    z-index: -1 !important;
-    transform: scaleX(-1);
-}
 
-
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     .blob-faq-left-bg{
         top: -6em;
         left: 0.5em;
     }
-}
+} */
 
 @media (min-width: 992px) {
 
@@ -1207,9 +1211,9 @@ body {
     z-index: 1000;
     display: none;
     animation: slide-down 0.5s ease-out forwards;
-  }
+}
 
-  .whatsapp-button a {
+.whatsapp-button a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1217,27 +1221,30 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     text-decoration: none;
-  }
+}
 
-  .whatsapp-button a:hover {
+.whatsapp-button a:hover {
     transform: scale(1.1);
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
-  }
+}
 
-  .whatsapp-button img {
+.whatsapp-button img {
     width: 55px;
     height: 55px;
-  }
+}
 
 /* Slide-down animation */
 @keyframes slide-down {
     from {
-      opacity: 0;
-      transform: translateY(-10em); /* Start from above */
+        opacity: 0;
+        transform: translateY(-10em);
+        /* Start from above */
     }
+
     to {
-      opacity: 1;
-      transform: translateY(0); /* End at its original position */
+        opacity: 1;
+        transform: translateY(0);
+        /* End at its original position */
     }
 }
 
@@ -1382,9 +1389,9 @@ form .form-group textarea {
     position: relative;
     overflow: hidden;
     transition: box-shadow 0.4s ease, transform 0.3s ease;
-  }
+}
 
-  .send-message-btn::after {
+.send-message-btn::after {
     content: '';
     position: absolute;
     top: 0;
@@ -1397,19 +1404,20 @@ form .form-group textarea {
     opacity: 0;
     z-index: -1;
     transition: opacity 0.4s ease, transform 0.4s ease;
-  }
+}
 
-  .send-message-btn:hover {
+.send-message-btn:hover {
     /* transform: translateY(-2px); Slight lift effect */
     box-shadow: 0 0 15px rgba(0, 123, 255, 0.611), 0 0 25px rgba(0, 123, 255, 0.611);
-    background-color: #007bff; 
-    color: #fff; 
-  }
+    background-color: #007bff;
+    color: #fff;
+}
 
-  .send-message-btn:hover::after {
+.send-message-btn:hover::after {
     opacity: 1;
-    transform: scale(1.2); /* Slight scale for the glow effect */
-  }
+    transform: scale(1.2);
+    /* Slight scale for the glow effect */
+}
 
 button i {
     position: relative;
@@ -1685,10 +1693,10 @@ button:hover i {
 
 .bpMessageListViewport {
     background: linear-gradient(to bottom, #4484fb, #679eff) !important;
-  }
-  
-  
-  .bpComposerPoweredBy {
+}
+
+
+.bpComposerPoweredBy {
     opacity: 0 !important;
     pointer-events: none !important;
-  }
+}
