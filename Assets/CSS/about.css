@@ -161,10 +161,10 @@ body {
 }
 
 
-/* .blob {
+.blob {
   position: relative;
-  overflow: hidden;
-} */
+  /* overflow: hidden; */
+}
 
 .about-us{
   position: relative;
@@ -193,7 +193,7 @@ body {
 
 .blob-about-bg2{
   position: absolute;
-    top: 49em;
+    top: -4em;
     left: -8em;
     width: 400px;
     height: 400px;
@@ -206,31 +206,10 @@ body {
 
 @media (max-width: 767px) {
   .blob-about-bg2{
-      top: 99em;
-      left: -10em;
+      left: -11em;
   }
 }
 
-@media (min-width:768px) and (max-width:990px){
-  .blob-about-bg2{
-    top: 73em;
-    left: -10em;
-}
-}
-
-@media (min-width:991px) and (max-width:1023px){
-  .blob-about-bg2{
-    top: 80em;
-    left: -10em;
-}
-}
-
-@media (min-width:1024px) and (max-width:1280px){
-  .blob-about-bg2{
-    top: 54em;
-    left: -10em;
-}
-}
 
 .about-us-title {
   text-align: center;
@@ -582,7 +561,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer .row {
     flex-direction: column;
     text-align: center;

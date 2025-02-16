@@ -45,13 +45,15 @@ sr.reveal("#our-services .mb-4", { delay: 200 });
 sr.reveal(".row1", { delay: 400 });
 sr.reveal(".row2", { delay: 600 });
 
-const cards = document.querySelectorAll(".glow-card");
-cards.forEach((card) => {
-  card.onmousemove = function (e) {
-    let x = e.pageX - card.offsetLeft;
-    let y = e.pageY - card.offsetTop;
+const cards = document.querySelectorAll('.glow-card');
 
-    card.style.setProperty("--x", x + "px");
-    card.style.setProperty("--y", y + "px");
-  };
+cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty('--x', `${x}px`);
+        card.style.setProperty('--y', `${y}px`);
+    });
 });

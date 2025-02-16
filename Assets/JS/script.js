@@ -445,16 +445,19 @@ function addLinkToImage() {
 window.addEventListener("load", addLinkToImage);
 window.addEventListener("resize", addLinkToImage);
 
-const cards = document.querySelectorAll(".glow-card");
-cards.forEach((card) => {
-  card.onmousemove = function (e) {
-    let x = e.pageX - card.offsetLeft;
-    let y = e.pageY - card.offsetTop;
+const cards = document.querySelectorAll('.glow-card');
 
-    card.style.setProperty("--x", x + "px");
-    card.style.setProperty("--y", y + "px");
-  };
+cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty('--x', `${x}px`);
+        card.style.setProperty('--y', `${y}px`);
+    });
 });
+
 
 // Function to check if the Contact Us section is in view (partially or fully)
 function isSectionInView(section) {
