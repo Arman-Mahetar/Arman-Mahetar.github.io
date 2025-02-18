@@ -8,16 +8,16 @@ menuToggle.addEventListener("click", function () {
 
   // Toggle menu icon
   if (isExpanded) {
-    menuIcon.innerHTML = "&#9776;"; // Hamburger Icon
+    menuIcon.innerHTML = "&#9776;"; 
   } else {
-    menuIcon.innerHTML = "&times;"; // Close Icon
+    menuIcon.innerHTML = "&times;";
   }
 });
 
 // Reset menu icon when menu is hidden
 navbarNav.addEventListener("hidden.bs.collapse", function () {
   const menuIcon = document.querySelector(".menu-icon");
-  menuIcon.innerHTML = "&#9776;"; // Reset to Hamburger Icon
+  menuIcon.innerHTML = "&#9776;"; 
 });
 
 // Automatically close the menu when a link is clicked

@@ -8,7 +8,6 @@ body {
 }
 
 .navbar {
-  /* background-color: #f8f9fa; */
   background-color: white;
   z-index: 1;
 }
@@ -19,7 +18,7 @@ body {
 
 .ms-1 {
   margin-left: -17px !important;
-  margin-top: -12px !important;
+  margin-top: -11px !important;
   max-height: 49px !important;
 }
 
@@ -44,11 +43,6 @@ body {
 .navbar-nav .nav-link:hover {
   color: #1404fa !important;
 }
-
-/* .menu-icon {
-  font-size: 1.7rem;
-} */
-
 
 @media (min-width:992px) {
   .navbar-nav .nav-link {
@@ -80,7 +74,7 @@ body {
   }
 
   .ms-2 {
-    margin-left: -50px !important;
+    margin-left: -45px !important;
   }
 }
 
@@ -99,11 +93,11 @@ body {
   }
 
   .ms-1 {
-    max-width: 5.5em;
+    max-width: 4.5em;
   }
 
   .ms-2 {
-    max-width: 13em;
+    max-width: 11em;
   }
 
 }
@@ -153,7 +147,6 @@ body {
     top: 100%;
     right: 0;
     width: 100%;
-    /* background: rgba(255, 255, 255, 0.944); */
     background-color: #fff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.178);
     border-radius: 10px;
@@ -163,7 +156,6 @@ body {
 
 .blob {
   position: relative;
-  /* overflow: hidden; */
 }
 
 .about-us{
@@ -218,7 +210,6 @@ body {
   color: #333;
   margin-bottom: 30px;
   margin-top: 2em;
-  /* text-transform: uppercase; */
 }
 
 .about-us-content {
@@ -298,11 +289,6 @@ body {
   padding: 1rem;
   height: 10em;
 }
-
-/* .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-} */
 
 .card-title {
   font-weight: bold;
@@ -386,15 +372,9 @@ body {
   background-color: #f6f6f6;
   box-shadow: 0 4px 10px rgb(0 0 0 / 40%);
   border: solid 0.5px #009fff;
-  /* border-radius: 10px; */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 12em;
 }
-
-/* .feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-} */
 
 .feature-icon {
   font-size: 2.5rem;
@@ -417,7 +397,6 @@ body {
   margin-bottom: 2em;
 }
 
-/* Media Query for Mobile Devices */
 @media (max-width: 576px) {
   #our-special-features {
     padding: 1.5rem 1rem;
@@ -554,7 +533,6 @@ body {
   margin-bottom: 0rem;
 }
 
-/* Responsive Design */
 @media (min-width: 992px) {
   .footer .footer-middle {
     padding-left: 8em;

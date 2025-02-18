@@ -8,9 +8,9 @@ menuToggle.addEventListener('click', function () {
 
   // Toggle menu icon
   if (isExpanded) {
-    menuIcon.innerHTML = '&#9776;'; // Hamburger Icon
+    menuIcon.innerHTML = '&#9776;'; 
   } else {
-    menuIcon.innerHTML = '&times;'; // Close Icon
+    menuIcon.innerHTML = '&times;'; 
   }
 });
 
