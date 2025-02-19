@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  initNavbar(); 
+  initNavbar();
   showSplashScreen();
-  initObservers(); 
+  initObservers();
+  observeSplashScreen();
 });
 
 function showSplashScreen() {
@@ -18,20 +19,59 @@ function showSplashScreen() {
         // Start animations after splash screen
         startStatAnimation();
         setTimeout(() => {
-          initScrollReveal(); 
-        }, 100); 
-      }, 1000); 
-    }, 2500);  
+          initScrollReveal();
+        }, 100);
+      }, 1000);
+    }, 2500);
     sessionStorage.setItem("splashShown", "true");
   } else {
-    // If splash screen was already shown, proceed without delay
     if (splashScreen) splashScreen.style.display = "none";
     if (mainContent) mainContent.style.display = "block";
 
-    // Start animations immediately if splash screen was already shown
     startStatAnimation();
     initScrollReveal();
     revealAboutImage();
+  }
+}
+
+var Tawk_API = Tawk_API || {},
+  Tawk_LoadStart = new Date();
+
+function loadChatbot() {
+  var s1 = document.createElement("script"),
+    s0 = document.getElementsByTagName("script")[0];
+  s1.async = true;
+  s1.src = "https://embed.tawk.to/67b4a7942247f51906aa70cd/1ikcqt7jm";
+  s1.charset = "UTF-8";
+  s1.setAttribute("crossorigin", "*");
+  s0.parentNode.insertBefore(s1, s0);
+}
+
+function observeSplashScreen() {
+  var splashScreen = document.getElementById("splash-screen");
+
+  if (splashScreen) {
+    var observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        if (mutation.attributeName === "style") {
+          var style = window.getComputedStyle(splashScreen);
+          if (style.display === "none" || style.opacity === "0") {
+            loadChatbot();
+            observer.disconnect();
+          }
+        }
+      });
+    });
+
+    observer.observe(splashScreen, { attributes: true });
+
+    setTimeout(function () {
+      if (window.getComputedStyle(splashScreen).display === "none") {
+        loadChatbot();
+      }
+    });
+  } else {
+    loadChatbot();
   }
 }
 
@@ -85,29 +125,29 @@ function initNavbar() {
     // Toggle the menu and update the icon
     navbarToggle.addEventListener("click", function () {
       if (navbarMenu.classList.contains("show")) {
-        bsCollapse.hide(); 
+        bsCollapse.hide();
         menuIcon.innerHTML = "&#9776;";
       } else {
-        bsCollapse.show(); 
-        menuIcon.innerHTML = "&times;"; 
+        bsCollapse.show();
+        menuIcon.innerHTML = "&times;";
       }
     });
 
     // Listen for Bootstrap collapse events to reset the icon
     navbarMenu.addEventListener("hidden.bs.collapse", function () {
-      menuIcon.innerHTML = "&#9776;"; 
+      menuIcon.innerHTML = "&#9776;";
     });
 
     navbarMenu.addEventListener("shown.bs.collapse", function () {
-      menuIcon.innerHTML = "&times;"; 
+      menuIcon.innerHTML = "&times;";
     });
 
     // Automatically close the menu and reset the icon when a link is clicked
     document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
       link.addEventListener("click", () => {
         if (navbarMenu.classList.contains("show")) {
-          bsCollapse.hide(); 
-          menuIcon.innerHTML = "&#9776;"; 
+          bsCollapse.hide();
+          menuIcon.innerHTML = "&#9776;";
         }
       });
     });
@@ -115,12 +155,12 @@ function initNavbar() {
     // Close the menu when clicking outside
     document.addEventListener("click", function (event) {
       if (
-        navbarMenu.classList.contains("show") && 
+        navbarMenu.classList.contains("show") &&
         !navbarMenu.contains(event.target) &&
-        !navbarToggle.contains(event.target) 
+        !navbarToggle.contains(event.target)
       ) {
-        bsCollapse.hide(); 
-        menuIcon.innerHTML = "&#9776;"; 
+        bsCollapse.hide();
+        menuIcon.innerHTML = "&#9776;";
       }
     });
   }
@@ -134,12 +174,12 @@ function startStatAnimation() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            animateNumbers(); 
+            animateNumbers();
             statsObserver.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.5 } 
+      { threshold: 0.5 }
     );
 
     statsObserver.observe(statsSection);
@@ -161,7 +201,7 @@ function animateNumbers() {
         stat.innerText = Math.ceil(current);
         setTimeout(updateCount, 30);
       } else {
-        stat.innerText = target; 
+        stat.innerText = target;
       }
     };
 
@@ -204,13 +244,13 @@ function initObservers() {
     observer.observe(heroSection);
   }
 
-  startStatAnimation(); 
+  startStatAnimation();
 }
 
 // Scroll-Based Active Link Logic
 document.addEventListener("DOMContentLoaded", function () {
   const navbarLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll("section"); 
+  const sections = document.querySelectorAll("section");
   const offset = document.querySelector("nav").offsetHeight;
 
   // Special sections that define the "Home" link area
@@ -229,12 +269,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function setActiveLink() {
     const scrollPosition = window.scrollY + offset + 1;
 
-    let isHomeActive = false; 
-    let isContactActive = false; 
+    let isHomeActive = false;
+    let isContactActive = false;
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop; 
-      const sectionHeight = section.offsetHeight; 
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
       const link = document.querySelector(`.nav-link[href="#${section.id}"]`);
 
       // Check if the current scroll position is within the section's boundaries
@@ -347,7 +387,7 @@ function sendMail() {
     })
     .catch((error) => {
       console.error("Error:", error);
-      showAlert("Failed to send email. Please try again.", "error"); 
+      showAlert("Failed to send email. Please try again.", "error");
     });
 }
 
@@ -359,7 +399,7 @@ function showAlert(message, type = "success") {
 
   // Create alert box
   const alertBox = document.createElement("div");
-  alertBox.className = `custom-alert ${type}`; 
+  alertBox.className = `custom-alert ${type}`;
   alertBox.textContent = message;
 
   // Create OK button
@@ -389,7 +429,7 @@ function toggleButtonVisibility() {
   // Check screen width
   if (window.innerWidth >= 1024) {
     buttons.forEach((button) => {
-      button.style.display = "block"; 
+      button.style.display = "block";
     });
   } else {
     buttons.forEach((button) => {

@@ -859,7 +859,7 @@ body {
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    height: 14em;
+    height: 12em;
 }
 
 
@@ -886,12 +886,6 @@ body {
     color: #333;
 }
 
-.client-company {
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: -0.3rem;
-    font-style: italic;
-}
 
 @media (max-width: 576px) {
     #clients-words {
@@ -921,11 +915,6 @@ body {
 
     .client-name {
         font-size: 0.9rem;
-    }
-
-    .client-company {
-        font-size: 0.8rem;
-        margin-top: -0.2rem;
     }
 }
 
